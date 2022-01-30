@@ -334,10 +334,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if(enemyReady) {
         if(currentPlayer === 'user') {
-          turnDisplay.innerHTML = 'Your Go'
+          turnDisplay.innerHTML = 'Your turn'
         }
         if(currentPlayer === 'enemy') {
-          turnDisplay.innerHTML = "Enemy's Go"
+          turnDisplay.innerHTML = "Enemy's turn"
         }
       }
     }
@@ -351,14 +351,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function playGameSingle() {
       if (isGameOver) return
       if (currentPlayer === 'user') {
-        turnDisplay.innerHTML = 'Your Go'
+        turnDisplay.innerHTML = 'Your turn'
         computerSquares.forEach(square => square.addEventListener('click', function(e) {
           shotFired = square.dataset.id
           revealSquare(square.classList)
         }))
       }
       if (currentPlayer === 'enemy') {
-        turnDisplay.innerHTML = 'Computers Go'
+        turnDisplay.innerHTML = 'Computers turn'
         setTimeout(enemyGo, 1000)
       }
     }
@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
         checkForWins()
       } else if (gameMode === 'singlePlayer') enemyGo()
       currentPlayer = 'user'
-      turnDisplay.innerHTML = 'Your Go'
+      turnDisplay.innerHTML = 'Your turn'
     }
   
     function checkForWins() {

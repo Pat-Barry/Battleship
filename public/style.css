@@ -31,11 +31,24 @@ body {
   list-style: none;
 }
 
+.internet-style {
+  font-size: 2rem;
+  color: #fc00d9;
+}
+
 .splash-btn-container {
   display: flex;
 }
 
 .btn-container {
+  border: 5px solid #fc00d9;
+  border-radius: 5px;
+  margin: 0rem 3rem 0rem 3rem;
+  padding: 10px;
+}
+
+.button-extra {
+  background-color: #1316f9;
   border: 5px solid #fc00d9;
   border-radius: 5px;
   margin: 0rem 3rem 0rem 3rem;
@@ -229,6 +242,7 @@ body {
 
 .info-text {
   margin: 1rem;
+  color: #fc00d9;
 }
 
 .miss,
@@ -252,7 +266,7 @@ body {
 }
 
 .boom::after {
-  background-color: red;
+  background-color: #fc00d9;
 }
 
 .miss::before {
@@ -283,7 +297,7 @@ body {
 
 @keyframes boom {
   0% {
-    background-color: red;
+    background-color: #fc00d9;
   }
 
   100% {
