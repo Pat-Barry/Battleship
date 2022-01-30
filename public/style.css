@@ -1,49 +1,106 @@
+body {
+  margin: 0;
+  background-color: #1316f9;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  font-family: "Permanent Marker", cursive;
+  box-sizing: border-box;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 66vh;
+}
+
+.splash-title {
+  font-size: 10rem;
+  color: #fc00d9;
+}
+
+.btn {
+  border: #fc00d9;
+  color: #fc00d9;
+  list-style: none;
+}
+
+.splash-btn-container {
+  display: flex;
+}
+
+.btn-container {
+  border: 5px solid #fc00d9;
+  border-radius: 5px;
+  margin: 0rem 3rem 0rem 3rem;
+  padding: 10px;
+}
+
+.btn {
+  color: #fc00d9;
+  text-decoration: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #8a207c;
+}
+
+.splash-battleship-image {
+  position: absolute;
+  height: 30rem;
+  color: #fc00d9;
+  width: auto;
+  right: 0;
+  left: 70vw;
+  bottom: 1vh;
+}
+
 .container {
   display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.grid-user {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: blue;
-  margin: 20px;
+.battleship-grid {
+  margin: 2vmin;
+  display: grid;
+  background-color: hsl(200, 100%, 50%);
+  grid-template-rows: repeat(10, 4.6vmin);
+  grid-template-columns: repeat(10, 4.6vmin);
 }
 
-.grid div {
-  width: 40px;
-  height: 40px;
+.taken,
+.ship {
+  background-color: hsl(0, 0%, 80%);
 }
 
-.grid-computer {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: lightgreen;
-  margin: 20px;
+.battleship-grid div {
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
 }
 
 .grid-display {
   width: 400px;
   height: 400px;
   margin: 20px;
-  background-color: yellow;
 }
 
 .destroyer-container {
   width: 80px;
   height: 40px;
-  background-color: orange;
   margin: 10px;
   display: flex;
 }
-
 .destroyer-container-vertical {
   width: 40px;
   height: 80px;
-  background-color: orange;
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -52,7 +109,6 @@
 .submarine-container {
   width: 120px;
   height: 40px;
-  background-color: pink;
   margin: 10px;
   display: flex;
 }
@@ -60,7 +116,6 @@
 .submarine-container-vertical {
   width: 40px;
   height: 120px;
-  background-color: pink;
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +124,6 @@
 .cruiser-container {
   width: 120px;
   height: 40px;
-  background-color: purple;
   margin: 10px;
   display: flex;
 }
@@ -77,7 +131,6 @@
 .cruiser-container-vertical {
   width: 40px;
   height: 120px;
-  background-color: purple;
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +139,6 @@
 .battleship-container {
   width: 160px;
   height: 40px;
-  background-color: aqua;
   margin: 10px;
   display: flex;
 }
@@ -94,7 +146,6 @@
 .battleship-container-vertical {
   width: 40px;
   height: 160px;
-  background-color: aqua;
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -103,7 +154,6 @@
 .carrier-container {
   width: 200px;
   height: 40px;
-  background-color: green;
   margin: 10px;
   display: flex;
 }
@@ -111,7 +161,6 @@
 .carrier-container-vertical {
   width: 40px;
   height: 200px;
-  background-color: green;
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -120,26 +169,6 @@
 .ship div {
   width: 40px;
   height: 40px;
-}
-
-.destroyer {
-  background-color: orange;
-}
-
-.submarine {
-  background-color: pink;
-}
-
-.cruiser {
-  background-color: purple;
-}
-
-.battleship {
-  background-color: aqua;
-}
-
-.carrier {
-  background-color: green;
 }
 
 .boom {
